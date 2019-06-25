@@ -1,0 +1,42 @@
+.feedback {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 62px;
+  padding-bottom: 62px;
+  background-repeat: no-repeat;
+  background-image: url('../img/background/background-map.jpg');
+
+  &__block {
+    width: 302px;
+    margin-left: auto;
+    padding: 29px 26px 31px;
+
+    color: $black-text-color;
+    background-color: $submenu-background;
+    border-radius: 16px;
+  }
+
+  &__text {
+   @include text(14, 20);
+  }
+
+  &__button {
+    width: 251px;
+    margin-top: 25px;
+  }
+
+  &__address {
+    margin-top: 0;
+    margin-bottom: 20px;
+    @include text(18, 24);
+    font-weight: 700;
+  }
+
+  &__phone {
+    margin-top: 2px;
+    margin-bottom: 3px;
+    @include text(18, 24);
+    font-weight: 700;
+  }
+
+}

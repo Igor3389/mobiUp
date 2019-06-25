@@ -1,0 +1,70 @@
+.pages {
+  display: flex;
+  width: 190px;
+  height: 27px;
+  margin-left: auto;
+  font-weight: 500;
+
+  &__list {
+    display: flex;
+    margin-right: 16px;
+  }
+
+  &__item {
+    margin-right: 2px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 27px;
+    height: 27px;
+    @include text(16, 27);
+    text-align: center;
+    vertical-align: middle;
+
+    color: $white;
+    background-color: transparent;
+    border-radius: 50%;
+
+    &[href]:hover {
+      background-color:  rgba(255, 255, 255, 0.2);
+    }
+
+    &[href]:active {
+      color: $black-text-color;
+      background-color: $white;
+    }
+
+    &--active {
+      color: $black-text-color;
+      background-color: $white;
+    }
+  }
+
+  &__button {
+    display: block;
+    margin-top: 3px;
+    width: 7px;
+    height: 12px;
+
+    &--back {
+      margin-right: 16px;
+    }
+  }
+
+  &__icon {
+    fill: $white;
+
+    &--back {
+      transform: rotate(180deg);
+    }
+
+    &--disabled {
+      fill: rgba(255, 255, 255, 0.2);
+    }
+  }
+}

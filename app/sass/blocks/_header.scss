@@ -1,0 +1,71 @@
+// header block
+.header {
+  padding-top: 75px;
+  padding-bottom: 26px;
+
+  @include sm {
+    padding-top: 0;
+  }
+
+  &__block {
+    &::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    &--left {
+      width: 44%;
+      float: left;
+
+      @include md {
+        float: none;
+        width: 75%;
+        margin: 0 auto;
+      }
+    }
+
+    &--right {
+      width: 48%;
+      float: right;
+
+      @include md {
+        float: none;
+        width: 75%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__info {
+    float: right;
+    padding-top: 14px;
+
+    @include sm {
+      float: none;
+      margin: 0 auto;
+    }
+  }
+
+  &__help {
+    float: right;
+    padding-top: 16px;
+
+    @include sm {
+      float: none;
+      width: 227px;
+      margin: 0 auto;
+    }
+  }
+
+  &__phone {
+    float: left;
+    padding-top: 22px;
+
+    @include sm {
+      float: none;
+      width: 200px;
+      margin: 0 auto;
+    }
+  }
+}

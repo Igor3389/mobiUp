@@ -1,0 +1,35 @@
+.social {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 12px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+    user-select: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+
+    &:hover .social__icon, &:focus .social__icon {
+      fill: rgba(255, 255, 255, 1);
+    }
+
+    &:active .social__icon {
+      fill: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  &__icon {
+    margin: auto;
+    fill: rgba(255, 255, 255, 0.8);
+  }
+}

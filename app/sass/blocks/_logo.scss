@@ -1,0 +1,16 @@
+// логотип
+.logo {
+  float: left;
+  display: block;
+  margin-left: -14px;
+
+  @include md {
+    margin-left: 0;
+  }
+
+  @include sm {
+    float: none;
+    width: 168px;
+    margin: 0 auto;
+  }
+}

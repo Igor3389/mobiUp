@@ -1,0 +1,50 @@
+.features {
+  position: relative;
+  z-index: 1000;
+  margin-top: -300px;
+  margin-bottom: 40px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    width: 560px;
+    padding: 14px 20px 24px;
+    font-weight: 700;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+
+    &--berry {
+      margin-right: auto;
+      background-color: #cc0033;
+      background-image: url('../img/background/background-feature-1.jpg');
+    }
+
+    &--shockled {
+      background-color: #330000;
+      background-image: url('../img/background/background-feature-2.jpg');
+    }
+  }
+
+  &__title {
+    margin-bottom: 17px;
+    @include text(35, 41);
+  }
+
+  &__text {
+    margin-bottom: 45px;
+    @include text(18, 22);
+  }
+
+  &__button {
+    display: block;
+    width: 165px;
+    margin-left: auto;
+  }
+
+  &__shockled-button {
+    width: 190px;
+  }
+
+}

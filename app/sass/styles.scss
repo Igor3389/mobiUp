@@ -1,0 +1,74 @@
+@import "normalize";
+@import "variables";
+@import "libs/slick";
+@import "mixins";
+@import "fonts";
+@import "hidden";
+@import "settings";
+//@import "blocks/field";
+@import "blocks/arrow";
+//@import "blocks/chekcbox";
+//@import "blocks/radio";
+//@import "blocks/subtitle";
+//@import "blocks/title";
+@import "blocks/container";
+//@import "blocks/shop";
+//@import "blocks/modal";
+//@import "blocks/button";
+@import "blocks/navigation";
+@import "blocks/logo";
+@import "blocks/info";
+@import "blocks/phone";
+@import "blocks/help";
+@import "blocks/header";
+@import "blocks/repairs";
+@import "blocks/price";
+//@import "blocks/menu-list";
+//@import "blocks/user-list";
+//@import "blocks/inner-page";
+//@import "blocks/item-page";
+//@import "blocks/price-page";
+//@import "blocks/features";
+//@import "blocks/page-block";
+//@import "blocks/news";
+//@import "blocks/options";
+//@import "blocks/gallery";
+//@import "blocks/contacts";
+//@import "blocks/make-up";
+@import "blocks/social";
+@import "blocks/service";
+//@import "blocks/makes";
+//@import "blocks/groups";
+//@import "blocks/products";
+//@import "blocks/table";
+//@import "blocks/product";
+//@import "blocks/product-item";
+//@import "blocks/description";
+//@import "blocks/footer";
+//@import "blocks/map";
+//@import "blocks/login";
+
+body {
+  @include default;
+  min-width: 320px;
+
+  font-family: 'PT Sans Narrow', 'Arial', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: $text-color;
+  background-color: $white;
+  background-image: url("../img/background-images.png"), url("../img/background-images.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: right -465px top -333px, left -465px bottom -333px;
+
+  @include md {
+    background-image: none;
+  }
+}
+
+
+
+
+

@@ -1,0 +1,220 @@
+extends layouts/page
+include mixins/mixins
+block variables
+    - var title= 'Mobiup | Сервисный центр по ремонту цифровой техники'
+    - var index= true
+block pageContent
+    main
+        h1.visually-hidden Сервисный центр по ремонту цифровой техники
+        section.repairs
+            .container
+                h2.repairs__title Срочный ремонт цифровой техники в центре Челябинска любой сложности от 10 минут с гарантией до 90 дней
+                p.repairs__text Ремонтируем телефоны, планшеты, ноутбуки, компьютеры и другую технику
+                ul.repairs__list
+                    li.repairs__item.repairs__item--order Множество запчастей  в наличии и под заказ
+                    li.repairs__item.repairs__item--alternate Предоставляем телефон  на подмену
+                    li.repairs__item.repairs__item--discount Скидка 10% на услуги для  всех записавшихся с сайта
+        .container
+            section.price
+                h2.price__title Прайс на услуги по ремонту
+                ul.price__list
+                    li.price__item
+                        .price__header.price__header--smart
+                            h3.price__subtitle Ремонт смартфонов
+                            span.price__time От 5 минут
+                            span.price__arrow(aria-label='Свернуть/Развернуть блок')
+                            span.price__arrow--green(aria-label='Свернуть/Развернуть блок')
+                        .price__block.service
+                            ul.service__list
+                                li.service__item
+                                    span.service__name Диагностика неисправности
+                                    span.service__sign-up
+                                        a(href='#') Записаться
+                                    span.service__price Бесплатно
+                                    span.service__time От 5 минут
+                                li.service__item
+                                    span.service__name Диагностика неисправности
+                                    span.service__sign-up
+                                        a(href='#') Записаться
+                                    span.service__price 500 руб.
+                                    span.service__time От 5 минут
+                                li.service__item
+                                    span.service__name Диагностика неисправности
+                                    span.service__sign-up
+                                        a(href='#') Записаться
+                                    span.service__price Бесплатно
+                                    span.service__time От 5 минут
+                                li.service__item
+                                    span.service__name Диагностика неисправности
+                                    span.service__sign-up
+                                        a(href='#') Записаться
+                                    span.service__price Бесплатно
+                                    span.service__time От 5 минут
+                                li.service__item
+                                    span.service__name Диагностика неисправности
+                                    span.service__sign-up
+                                        a(href='#') Записаться
+                                    span.service__price Бесплатно
+                                    span.service__time От 5 минут
+                                li.service__item
+                                    span.service__name Диагностика неисправности
+                                    span.service__sign-up
+                                        a(href='#') Записаться
+                                    span.service__price Бесплатно
+                                    span.service__time От 5 минут
+                                li.service__item
+                                    span.service__name Диагностика неисправности
+                                    span.service__sign-up
+                                        a(href='#') Записаться
+                                    span.service__price Бесплатно
+                                    span.service__time От 5 минут
+                    li.price__item
+                        .price__header.price__header--plansh
+                            h3.price__subtitle Ремонт планшетов
+                            span.price__time От 10 минут
+                            span.price__arrow(aria-label='Свернуть/Развернуть блок')
+                            span.price__arrow--green(aria-label='Свернуть/Развернуть блок')
+                        .price__block.service
+                            ul.service__list
+                                li.service__item
+                                    span.service__name Диагностика неисправности
+                                    span.service__sign-up
+                                        a(href='#') Записаться
+                                    span.service__price Бесплатно
+                                    span.service__time От 5 минут
+                                li.service__item
+                                    span.service__name Диагностика неисправности
+                                    span.service__sign-up
+                                        a(href='#') Записаться
+                                    span.service__price 500 руб.
+                                    span.service__time От 5 минут
+                                li.service__item
+                                    span.service__name Диагностика неисправности
+                                    span.service__sign-up
+                                        a(href='#') Записаться
+                                    span.service__price Бесплатно
+                                    span.service__time От 5 минут
+                                li.service__item
+                                    span.service__name Диагностика неисправности
+                                    span.service__sign-up
+                                        a(href='#') Записаться
+                                    span.service__price Бесплатно
+                                    span.service__time От 5 минут
+                                li.service__item
+                                    span.service__name Диагностика неисправности
+                                    span.service__sign-up
+                                        a(href='#') Записаться
+                                    span.service__price Бесплатно
+                                    span.service__time От 5 минут
+                                li.service__item
+                                    span.service__name Диагностика неисправности
+                                    span.service__sign-up
+                                        a(href='#') Записаться
+                                    span.service__price Бесплатно
+                                    span.service__time От 5 минут
+                                li.service__item
+                                    span.service__name Диагностика неисправности
+                                    span.service__sign-up
+                                        a(href='#') Записаться
+                                    span.service__price Бесплатно
+                                    span.service__time От 5 минут
+                    li.price__item
+                        .price__header.price__header--nout
+                            h3.price__subtitle Ремонт ноутбуков
+                            span.price__time От 10 минут
+                            span.price__arrow(aria-label='Свернуть/Развернуть блок')
+                            span.price__arrow--green(aria-label='Свернуть/Развернуть блок')
+                        .price__block.service
+                            ul.service__list
+                                li.service__item
+                                    span.service__name Диагностика неисправности
+                                    span.service__sign-up
+                                        a(href='#') Записаться
+                                    span.service__price Бесплатно
+                                    span.service__time От 5 минут
+                                li.service__item
+                                    span.service__name Диагностика неисправности
+                                    span.service__sign-up
+                                        a(href='#') Записаться
+                                    span.service__price 500 руб.
+                                    span.service__time От 5 минут
+                                li.service__item
+                                    span.service__name Диагностика неисправности
+                                    span.service__sign-up
+                                        a(href='#') Записаться
+                                    span.service__price Бесплатно
+                                    span.service__time От 5 минут
+                                li.service__item
+                                    span.service__name Диагностика неисправности
+                                    span.service__sign-up
+                                        a(href='#') Записаться
+                                    span.service__price Бесплатно
+                                    span.service__time От 5 минут
+                                li.service__item
+                                    span.service__name Диагностика неисправности
+                                    span.service__sign-up
+                                        a(href='#') Записаться
+                                    span.service__price Бесплатно
+                                    span.service__time От 5 минут
+                                li.service__item
+                                    span.service__name Диагностика неисправности
+                                    span.service__sign-up
+                                        a(href='#') Записаться
+                                    span.service__price Бесплатно
+                                    span.service__time От 5 минут
+                                li.service__item
+                                    span.service__name Диагностика неисправности
+                                    span.service__sign-up
+                                        a(href='#') Записаться
+                                    span.service__price Бесплатно
+                                    span.service__time От 5 минут
+                    li.price__item
+                        .price__header.price__header--comp
+                            h3.price__subtitle Ремонт компьютеров
+                            span.price__time От 10 минут
+                            span.price__arrow(aria-label='Свернуть/Развернуть блок')
+                            span.price__arrow--green(aria-label='Свернуть/Развернуть блок')
+                        .price__block.service
+                            ul.service__list
+                                li.service__item
+                                    span.service__name Диагностика неисправности
+                                    span.service__sign-up
+                                        a(href='#') Записаться
+                                    span.service__price Бесплатно
+                                    span.service__time От 5 минут
+                                li.service__item
+                                    span.service__name Диагностика неисправности
+                                    span.service__sign-up
+                                        a(href='#') Записаться
+                                    span.service__price 500 руб.
+                                    span.service__time От 5 минут
+                                li.service__item
+                                    span.service__name Диагностика неисправности
+                                    span.service__sign-up
+                                        a(href='#') Записаться
+                                    span.service__price Бесплатно
+                                    span.service__time От 5 минут
+                                li.service__item
+                                    span.service__name Диагностика неисправности
+                                    span.service__sign-up
+                                        a(href='#') Записаться
+                                    span.service__price Бесплатно
+                                    span.service__time От 5 минут
+                                li.service__item
+                                    span.service__name Диагностика неисправности
+                                    span.service__sign-up
+                                        a(href='#') Записаться
+                                    span.service__price Бесплатно
+                                    span.service__time От 5 минут
+                                li.service__item
+                                    span.service__name Диагностика неисправности
+                                    span.service__sign-up
+                                        a(href='#') Записаться
+                                    span.service__price Бесплатно
+                                    span.service__time От 5 минут
+                                li.service__item
+                                    span.service__name Диагностика неисправности
+                                    span.service__sign-up
+                                        a(href='#') Записаться
+                                    span.service__price Бесплатно
+                                    span.service__time От 5 минут

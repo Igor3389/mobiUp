@@ -1,0 +1,85 @@
+@import "libs/slick";
+@import "normalize";
+@import "variables";
+@import "mixins";
+@import "fonts";
+@import "hidden";
+@import "settings";
+
+@import "blocks/checkbox";
+@import "blocks/link";
+@import "blocks/field";
+@import "blocks/radio";
+@import "blocks/form";
+@import "blocks/types";
+//@import "blocks/subtitle";
+@import "blocks/button";
+//@import "blocks/bookmark";
+//@import "blocks/checkout";
+@import "blocks/container";
+@import "blocks/main-header";
+@import "blocks/logo";
+//@import "blocks/navigation-list";
+//@import "blocks/interactive";
+@import "blocks/login";
+@import "blocks/navigation";
+@import "blocks/cart";
+//@import "blocks/catalog";
+//@import "blocks/compare";
+@import "blocks/search";
+@import "blocks/main";
+@import "blocks/slider";
+@import "blocks/blog";
+@import "blocks/mail";
+//@import "blocks/populars";
+//@import "blocks/logout";
+//@import "blocks/servicies";
+//@import "blocks/subheader";
+//@import "blocks/new";
+//@import "blocks/categories";
+//@import "blocks/manufacturies";
+//@import "blocks/power";
+@import "blocks/features";
+@import "blocks/hits";
+@import "blocks/feedback";
+//@import "blocks/main-page";
+//@import "blocks/brands";
+//@import "blocks/about";
+//@import "blocks/map";
+@import "blocks/modal";
+//@import "blocks/contacts";
+@import "blocks/write";
+@import "blocks/inner-page";
+//@import "blocks/page-inner";
+@import "blocks/products";
+@import "blocks/product";
+//@import "blocks/sort";
+@import "blocks/range";
+@import "blocks/choice";
+//@import "blocks/hotels";
+@import "blocks/pages";
+//@import "blocks/color";
+//@import "blocks/bluetooth";
+@import "blocks/description";
+@import "blocks/main-footer";
+@import "blocks/social";
+
+
+body {
+  @include default;
+  min-width: 320px;
+
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  text-align: left;
+
+  background-color: $body-background-1;
+  color: $white;
+}
+
+
+
+
+

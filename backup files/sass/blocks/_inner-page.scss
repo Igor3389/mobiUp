@@ -1,0 +1,28 @@
+.inner-page {
+  padding-bottom: 29px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+  &__nav-list {
+    margin-top: 28px;
+    margin-bottom: 4px;
+    display: flex;
+    @include text(14, 13);
+  }
+
+  &__nav-item {
+    position: relative;
+    margin-right: 22px;
+
+    &::after {
+      content: '»';
+      position: absolute;
+      top: -1px;
+      right: -15px;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+  }
+
+}

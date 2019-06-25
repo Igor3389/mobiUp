@@ -1,0 +1,111 @@
+.repairs {
+  min-height: 345px;
+  padding-top: 46px;
+  padding-bottom: 15px;
+
+  text-align: center;
+  letter-spacing: 3px;
+  color: $white;
+
+  background-color: $black;
+  background-repeat: no-repeat;
+  background-image: url('../img/background-features.jpg');
+  background-size: cover;
+  background-position: center 0;
+
+  @include sm {
+    background-image: none;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 40px;
+    padding: 0 60px;
+
+    font-size: 33px;
+    line-height: 44px;
+    font-weight: 700;
+
+    @include sm {
+      padding: 0 10px;
+    }
+  }
+
+  &__text {
+    margin-top: 0;
+    margin-bottom: 66px;
+
+    font-size: 23px;
+
+    @include md {
+      padding: 0 60px;
+    }
+
+    @include sm {
+      padding: 0 10px;
+    }
+  }
+
+  &__list {
+    width: 880px;
+    margin: 0 auto;
+
+    @include md {
+      width: 640px;
+    }
+
+    @include sm {
+      width: 300px;
+    }
+
+    &::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+
+  &__item {
+    float: left;
+    width: 240px;
+    min-height: 60px;
+    margin-right: 72px;
+    padding-left: 70px;
+
+
+    font-size: 15px;
+    line-height: 19px;
+    letter-spacing: 1px;
+    text-align: left;
+
+    background-repeat: no-repeat;
+
+    @include sm {
+      float: none;
+      margin: 0 auto;
+    }
+
+    &:last-child {
+      margin-right: 0;
+
+      @include sm {
+        margin: 0 auto;
+      }
+    }
+
+    &--order {
+      background-image: url('../img/pngIcons/icon-order.png');
+      background-position: -4px -8px;
+    }
+
+    &--alternate {
+      background-image: url('../img/pngIcons/icon-smart.png');
+      background-position: 8px -10px;
+    }
+
+    &--discount {
+      background-image: url('../img/pngIcons/icon-location.png');
+      background-position: 5px -3px;
+    }
+  }
+}

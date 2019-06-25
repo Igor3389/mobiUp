@@ -1,0 +1,66 @@
+.product {
+  position: relative;
+  width: 267px;
+  text-align: center;
+
+  &:hover .product__overlay {
+    display: block;
+  }
+
+  &:hover .product__image {
+    position: relative;
+    z-index: 1000;
+  }
+
+  &__price {
+    position: relative;
+    z-index: 1000;
+    margin-top: -68px;
+    margin-bottom: 19px;
+    @include text(45, 50);
+    text-align: left;
+    font-weight: 700;
+  }
+
+  &__weight {
+    @include text(30, 50);
+  }
+
+  &__link {
+    position: relative;
+    z-index: 1000;
+    font-weight: 500;
+    @include text(16, 22);
+  }
+
+  &__hit-flag {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 61px;
+    height: 61px;
+    background-image: url('../img/pngIcons/hit.png');
+    background-repeat: no-repeat;
+  }
+
+  &__button {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  &__overlay {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    top: -7px;
+    left: -13px;
+    width: 293px;
+    height: 405px;
+    padding-top: 339px;
+
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+  }
+}

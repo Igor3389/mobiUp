@@ -1,0 +1,113 @@
+header.main-header.container
+    nav.main-header__wrapper
+        if (mainPage)
+            a.main-header__logo(aria-label='Логотип')
+                +icon('main-header__logo-icon', 'logo', 154, 64, {role: 'img'})
+        else
+            a.main-header__logo(href='index.html', aria-label='Логотип, переход на главную страницу')
+                +icon('main-header__logo-icon', 'logo', 154, 64, {role: 'img'})
+        ul.main-header__navigation.navigation
+            if (catalogPage)
+                li.navigation__item.navigation__item--submenu
+                    a.navigation__link.navigation__link--active Каталог
+                    .main-header__block.navigation__block
+                        p.navigation__subtitle Новинки
+                        ul.navigation__sublist
+                            li.navigation__subitem
+                                a.navigation__sublink.navigation__sublink--active Сливочное
+                            li.navigation__subitem
+                                a.navigation__sublink(href='#') Щербеты
+                            li.navigation__subitem
+                                a.navigation__sublink(href='#') Фруктовый лед
+                            li.navigation__subitem
+                                a.navigation__sublink(href='#') Мелорин
+            else
+                li.navigation__item.navigation__item--submenu
+                    a.navigation__link(href='catalog.html') Каталог
+                    .main-header__block.navigation__block
+                        p.navigation__subtitle Новинки
+                        ul.navigation__sublist
+                            li.navigation__subitem
+                                a.navigation__sublink(href='catalog.html') Сливочное
+                            li.navigation__subitem
+                                a.navigation__sublink(href='#') Щербеты
+                            li.navigation__subitem
+                                a.navigation__sublink(href='#') Фруктовый лед
+                            li.navigation__subitem
+                                a.navigation__sublink(href='#') Мелорин
+            li.navigation__item
+                a.navigation__link(href='#') Доставка и оплата
+            li.navigation__item
+                a.navigation__link(href='#') О Компании
+        a.main-header__search.search(href='#', aria-label='Поиск по сайту')
+            +icon('main-header__icon search__icon', 'search', 17, 17, {role: 'img'})
+            .main-header__block.search__block
+                form(action='#', method='post')
+                    input.search__field.field(type='text', name='searchRequest', placeholder='Что ищем?')
+                    button.visually-hidden(type='submit', name='searchButton')
+        ul.main-header__login.login
+            li.login__item.login__item--submenu
+                a.login__link(href='#', aria-label='Авторизация') Вход
+                    +icon('main-header__icon login__icon', 'login', 21, 19, {role: 'img'})
+                .main-header__block.login__block
+                    form(action='#', method='post')
+                        input.login__field.field(type='text', name='mail', placeholder='Электронная почта')
+                        input.login__field.field(type='password', name='password', placeholder='Пароль')
+                        .login__bottom
+                            button.login__button.button(type='submit', name='searchButton') Войти
+                            .login__right
+                                a.login__block-link.link.link--background(href='#')
+                                    span Забыли пароль?
+                                a.login__block-link.link.link--background(href='#')
+                                    span Новая регистрация
+        if(cartDone)
+            .cart
+                a.cart__link.cart__link--done(href='#', aria-label='Корзина товаров') 2 товара
+                .main-header__block.cart__block
+                    table.cart__table
+                        tr
+                            td.cart__close
+                                button.cart__close-button(type=button, aria-label='Убрать товар из корзины', name='product-1')
+                            td.cart__img
+                                +img({
+                                    class: 'cart__image',
+                                    src: 'img/product-1-small.png',
+                                    path: 'img/',
+                                    name: 'product-1-small',
+                                    format: '.png',
+                                    alt: 'Пломбир с апельсиновым джемом',
+                                    retina: ['2x', '3x']
+                                })
+                            td.cart__title Пломбир с апельсиновым джемом
+                            td.cart__weight
+                                | 1,5 кг х
+                                span 200 руб.
+                            td.cart__price 300 руб.
+                        tr
+                            td.cart__close
+                                button.cart__close-button(type=button, aria-label='Убрать товар из корзины', name='product-3')
+                            td.cart__img
+                                +img({
+                                    class: 'cart__image',
+                                    src: 'img/product-3-small.png',
+                                    path: 'img/',
+                                    name: 'product-3-small',
+                                    format: '.png',
+                                    alt: 'Клубничный пломбир с присыпкой  из белого шоколада',
+                                    retina: ['2x', '3x']
+                                })
+                            td.cart__title Клубничный пломбир с присыпкой  из белого шоколада
+                            td.cart__weight
+                                | 1,5 кг х
+                                span 300 руб.
+                            td.cart__price 450 руб.
+                    p.cart__total Итого: 750 руб.
+                    a.cart__button.button(href='#') Оформить заказ
+        else
+            .cart
+                a.cart__link(aria-label='Корзина товаров') Пусто
+                    +icon('cart__icon', 'cart', 21, 20, {role: 'img'})
+    p.main-header__time-work
+        span.main-header__time С 10 до 20, ежедневно
+        span.main-header__phone 8 812 450-25-25
+

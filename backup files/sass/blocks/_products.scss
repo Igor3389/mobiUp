@@ -1,0 +1,19 @@
+.products {
+  margin-bottom: 42px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 31px;
+  }
+
+  &__item {
+    margin-right: 26px;
+    margin-bottom: 38px;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+
+}

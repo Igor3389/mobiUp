@@ -1,0 +1,72 @@
+//Блок социальных сетей
+
+.no-js {
+  & .social:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.social {
+  position: absolute;
+  top: 221px;
+  right: 15px;
+
+  width: 52px;
+  min-height: 52px;
+  padding: 10px 6px;
+
+  text-align: center;
+
+  @include md {
+    right: 0;
+  }
+
+  @include sm {
+    position: static;
+    width: auto;
+    padding: 0;
+  }
+
+  &__slogan {
+    font-size: 12px;
+    font-weight: bold;
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  &__list {
+    padding-top: 5px;
+
+    @include sm {
+      width: 250px;
+      margin: 0 auto;
+
+      &::after {
+        content: '';
+        display: table;
+        clear: both;
+      }
+    }
+  }
+
+  &__item {
+    @include sm {
+      float: left;
+      margin-right: 29px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 7px;
+    border-radius: 50%;
+  }
+}

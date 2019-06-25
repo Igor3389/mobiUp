@@ -1,0 +1,24 @@
+footer.main-footer.container
+        +socialList('social', 'item', 'link', [
+            {link: '#', title: 'Мы в Твитере', id: 'tw', width: 32, height: 32},
+            {link: '#', title: 'Мы в Инстаграмме', id: 'inst', width: 32, height: 32},
+            {link: '#', title: 'Мы в Фейсбуке', id: 'fb', width: 32, height: 32},
+            {link: '#', title: 'Мы во Вконтакте', id: 'vk', width: 32, height: 32}])
+        ul.main-footer__list
+            li.main-footer__item.main-footer__item--favourite
+                a.main-footer__link.link(href='#', aria-label='Для поставщиков')
+                    +icon('main-footer__list-icon', 'heart', 15, 13, {role: 'img'})
+                    | Для поставщиков
+                li.main-footer__item
+                    a.main-footer__link.link(href='#') Наши документы
+                li.main-footer__item
+                    a.main-footer__link.link(href='#') О производстве
+                li.main-footer__item
+                    a.main-footer__link.link(href='#') Экологические стандарты
+        .main-footer__author
+            +icon('main-footer__academy-icon', 'logo-htmlacademy', 118, 38, {ariaLabelledby : 'heading'})
+                title#heading HTML Academy
+            p.main-footer__author-text
+                | Сделано в &ensp;
+                a.main-footer__author-link.link(href='#') HTML Academy
+                |  &ensp; © 2017

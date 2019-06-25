@@ -1,0 +1,166 @@
+extends layouts/page
+include mixins/mixins
+block variables
+    - var title= 'Gllacy | Главная'
+    - var mainPage= true
+    - var cartDone= false
+block pageContent
+    main.main(class=mainPage ? 'main-page' : 'inner-page')
+        h1.visually-hidden Gllacy
+        .container
+            section.slider
+                h2.visually-hidden Заказать пару пломбиров
+                ul.slider__list
+                    li.slider__item
+                        +img({
+                            class: 'slider__image',
+                            src: 'img/slider-1.png',
+                            path: 'img/',
+                            name: 'slider-1',
+                            format: '.png',
+                            alt: 'Крем-брюле и пломбир с малиновым джемом',
+                            retina: ['2x', '3x']
+                        })
+                        p.slider__title Крем-брюле и пломбир с малиновым джемом
+                        a.slider__button.button.button--shadow.button--large(href='#') Давайте оба!
+                    li.slider__item
+                        +img({
+                            class: 'slider__image',
+                            src: 'img/slider-2.png',
+                            path: 'img/',
+                            name: 'slider-2',
+                            format: '.png',
+                            alt: 'Шоколадный пломбир и лимонный сорбет ',
+                            retina: ['2x', '3x']
+                        })
+                        p.slider__title Шоколадный пломбир и лимонный сорбет
+                        a.slider__button.button.button--shadow.button--large(href='#') Давайте оба!
+                    li.slider__item
+                        +img({
+                            class: 'slider__image',
+                            src: 'img/slider-3.png',
+                            path: 'img/',
+                            name: 'slider-3',
+                            format: '.png',
+                            alt: 'Пломбир с помадкой и клубничный щербет',
+                            retina: ['2x', '3x']
+                        })
+                        p.slider__title Пломбир с помадкой и клубничный щербет
+                        a.slider__button.button.button--shadow.button--large(href='#') Давайте оба!
+            section.features
+                h2.visually-hidden Акции
+                ul.features__list
+                    li.features__item.features__item--berry
+                        h3.features__title Малинка даром!
+                        p.features__text При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
+                        a.features__button.button(href='#') Хочу варенье!
+                    li.features__item.features__item--shockled
+                        h3.features__title Шоколадки даром!
+                        p.features__text При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
+                        a.features__button.features__shockled-button.button(href='#') Хочу шоколадки!
+            section.hits
+                h2.visually-hidden Хиты продаж
+                ul.hits__list
+                    li.hits__item.product
+                        +img({
+                            class: 'product__image',
+                            src: 'img/product-1.png',
+                            path: 'img/',
+                            name: 'product-1',
+                            format: '.png',
+                            alt: 'Сливочное с апельсиновым джемом и цитрусовой стружкой',
+                            retina: ['2x', '3x']
+                        })
+                        p.product__price
+                            | 310 &#8381;
+                            span.product__weight /кг
+                        a.product__link.link(href='#') Сливочное с апельсиновым джемом и цитрусовой стружкой
+                        .product__overlay
+                            a.product__button.button(href='#') Быстрый просмотр
+                        span.product__hit-flag
+                    li.hits__item.product
+                        +img({
+                            class: 'product__image',
+                            src: 'img/product-2.png',
+                            path: 'img/',
+                            name: 'product-2',
+                            format: '.png',
+                            alt: 'Сливочно-кофейное с кусочками шоколада',
+                            retina: ['2x', '3x']
+                        })
+                        p.product__price
+                            | 380 &#8381;
+                            span.product__weight /кг
+                        a.product__link.link(href='#') Сливочно-кофейное с кусочками шоколада
+                        .product__overlay
+                            a.product__button.button(href='#') Быстрый просмотр
+                        span.product__hit-flag
+                    li.hits__item.product
+                        +img({
+                            class: 'product__image',
+                            src: 'img/product-3.png',
+                            path: 'img/',
+                            name: 'product-3',
+                            format: '.png',
+                            alt: 'Сливочно-клубничное с присыпкой из белого шоколада',
+                            retina: ['2x', '3x']
+                        })
+                        p.product__price
+                            | 355 &#8381;
+                            span.product__weight /кг
+                        a.product__link.link(href='#') Сливочно-клубничное с присыпкой из белого шоколада
+                        .product__overlay
+                            a.product__button.button(href='#') Быстрый просмотр
+                        span.product__hit-flag
+                    li.hits__item.product
+                        +img({
+                            class: 'product__image',
+                            src: 'img/product-4.png',
+                            path: 'img/',
+                            name: 'product-4',
+                            format: '.png',
+                            alt: 'Сливочное крем-брюле с карамельной подливкой',
+                            retina: ['2x', '3x']
+                        })
+                        p.product__price
+                            | 415 &#8381;
+                            span.product__weight /кг
+                        a.product__link.link(href='#') Сливочное крем-брюле с карамельной подливкой
+                        .product__overlay
+                            a.product__button.button(href='#') Быстрый просмотр
+                        span.product__hit-flag
+            section.description
+                h2.visually-hidden Описание особенностей Gllacy
+                p.description__slogan Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес
+                ul.description__list
+                    li.description__item.description__item--icecream Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
+                    li.description__item.description__item--bool Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
+                    li.description__item.description__item--leaf Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
+                    li.description__item.description__item--termometer Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
+            .main__bottom
+                article.blog
+                    h1.blog__title Новое в нашем блоге
+                    a.blog__link(href='#') 10 способов сервировки фруктовых щербетов к столу
+                section.mail
+                    h2.visually-hidden Оформить подписку
+                    .mail__wrapper
+                        p.mail__text Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
+                        form.mail__form
+                            input.mail__field.field(type='text', name='mail', placeholder='Электронная почта')
+                            button.mail__button.button(type='submit') Отправить
+        section.feedback
+            .container
+                h2.visually-hidden Как с нами связаться
+                .feedback__block
+                    p.feedback__text
+                        | Адрес главного офиса
+                        br
+                        | и офлайн-магазина:
+                    p.feedback__address
+                        | ул. Большая Конюшенная
+                        br
+                        | 19/8, Санкт-Петербург
+                    p.feedback__text Для заказов по телефону:
+                    p.feedback__phone 8 812 450-25-25
+                    p.feedback__text (с 10 до 20 ежедневно)
+                    a.feedback__button.button(href='#') Форма обратной связи

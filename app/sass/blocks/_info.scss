@@ -1,0 +1,30 @@
+.info {
+
+  width: 230px;
+  min-height: 50px;
+
+  &__block {
+    display: block;
+    margin-bottom: 8px;
+    padding-left: 30px;
+
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 1.1px;
+    white-space: nowrap;
+
+
+    background-repeat: no-repeat;
+
+    &--location {
+      background-image: url('../img/pngIcons/icon-address.png');
+      background-position: 2px 0;
+    }
+
+    &--time {
+      background-image: url('../img/pngIcons/icon-time.png');
+      background-position: 2px 2px;
+    }
+  }
+
+}

@@ -1,0 +1,24 @@
+@mixin default {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin list-default {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin md {
+  @media screen and (max-width: $desctop-width) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media screen and (max-width: $tablet-width) {
+    @content;
+  }
+}
+

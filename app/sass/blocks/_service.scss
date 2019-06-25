@@ -1,0 +1,90 @@
+.service {
+  &__item {
+    min-height: 45px;
+    padding-left: 13px;
+    padding-right: 51px;
+    padding-top: 7px;
+
+    font-size: 21px;
+    line-height: 30px;
+    background-color: $white;
+    letter-spacing: 0.7px;
+
+    &:hover {
+      position: relative;
+      z-index: 1000;
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    &::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+
+  &__name {
+    float: left;
+    display: block;
+    width: 230px;
+    margin-right: 45px;
+
+    @include sm {
+      float: none;
+      width: 100%;
+      margin-right: 0;
+      text-align: center;
+    }
+  }
+
+  &__time {
+    float: right;
+    display: block;
+    width: 90px;
+
+    color: $green-text;
+
+    @include md {
+      padding-left: 15%;
+    }
+
+    @include sm {
+      float: none;
+      width: 100%;
+      padding-left: 0;
+      text-align: center;
+    }
+  }
+
+  &__price {
+    float: right;
+    display: block;
+    width: 90px;
+    margin-left: 45px;
+
+    color: $green-text;
+
+    @include sm {
+      float: none;
+      margin-left: 0;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__sign-up {
+    float: right;
+    display: block;
+    width: 90px;
+    margin-left: 40px;
+
+    color: $blue-text;
+
+    @include sm {
+      float: none;
+      width: 100%;
+      margin-left: 0;
+      text-align: center;
+    }
+  }
+}

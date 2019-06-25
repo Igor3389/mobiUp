@@ -1,0 +1,66 @@
+.main-header {
+  position: relative;
+  z-index: 100;
+  padding-top: 9px;
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: -6px;
+  }
+
+  &__logo {
+    margin-right: 10px;
+  }
+
+  &__logo-icon {
+    fill: $white;
+  }
+
+  &__navigation {
+    margin-right: auto;
+  }
+
+  &__block {
+    display: none;
+    position: absolute;
+
+    border-radius: 6px;
+    color: $black-text-color;
+    background-color: $submenu-background;
+
+    box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  &__search {
+    margin-right: 10px;
+  }
+
+  &__icon {
+    fill: $white;
+  }
+
+  &__login {
+    margin-right: 10px;
+  }
+
+  &__time-work {
+    position: absolute;
+    z-index: -100;
+    right: 0;
+    top: 73px;
+    text-align: right;
+    font-weight: 700;
+  }
+
+  &__time {
+    display: block;
+    margin-bottom: 3px;
+    @include text(14, 16);
+  }
+
+  &__phone {
+    display: block;
+    @include text(22, 24);
+  }
+}

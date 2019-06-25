@@ -1,0 +1,21 @@
+.no-js {
+  & .phone:hover {
+    color: #00aee8;
+  }
+}
+
+.phone {
+  display: block;
+  width: 200px;
+  height: 33px;
+  padding-left: 40px;
+  padding-top: 5px;
+
+  font-size: 24px;
+  line-height: 18px;
+  font-weight: bold;
+
+  background-image: url('../img/pngIcons/icon-phone.png');
+  background-repeat: no-repeat;
+  background-position: 10px 0;
+}

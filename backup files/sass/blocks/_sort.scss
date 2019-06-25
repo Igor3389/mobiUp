@@ -1,0 +1,111 @@
+.sort {
+  display: flex;
+  padding: 30px 71px 21px;
+  font-size: 12px;
+  line-height: 18px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  &__result {
+    width: 123px;
+    margin-right: 42px;
+    
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+  }
+
+  &__title {
+    margin-right: 39px;
+    padding-top: 6px;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  &__list {
+    display: flex;
+    margin-right: auto;
+    padding-top: 6px;
+  }
+
+  &__item {
+    display: block;
+    height: 17px;
+    margin-right: 32px;
+    color: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px dotted $blue-text;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &[href]:hover, &[href]:focus {
+      color: $blue-text;
+    }
+
+    &[href]:active {
+      color: $black;
+      border-bottom: none;
+    }
+
+    &--active {
+      color: $blue-text;
+      border-bottom: none;
+    }
+  }
+
+  &__rank {
+    position: relative;
+    margin-top: 35px;
+    width: 30px;
+
+    &-item {
+      &--up {
+        position: absolute;
+        top: -26px;
+        left: -7px;
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 6px 10px 6px;
+        border-color: transparent transparent rgba(0, 0, 0, 0.3) transparent;
+
+        &.sort__rank-item--active {
+          border-color: transparent transparent $acient-blue transparent;
+        }
+
+        &[href]:hover {
+          border-color: transparent transparent $black transparent;
+        }
+
+        &[href]:active {
+          border-color: transparent transparent $acient-blue transparent;
+        }
+      }
+
+      &--down {
+        position: absolute;
+        top: -26px;
+        right: 1px;
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 10px 6px 0 6px;
+        border-color: rgba(0, 0, 0, 0.3) transparent transparent transparent;
+
+        &.sort__rank-item--active {
+          border-color: $acient-blue transparent transparent transparent;
+        }
+
+        &[href]:hover {
+          border-color: black transparent transparent transparent;
+        }
+
+        &[href]:active {
+          border-color: $acient-blue transparent transparent transparent;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+header.header
+    nav.navigation
+        .container
+            button.navigation__toggle(aria-label='Открыть меню')
+            ul.navigation__list
+                li.navigation__item
+                    a.navigation__link.navigation__link--sub(href='#') Услуги и цены
+                li.navigation__item
+                    a.navigation__link(href='#') Акции
+                li.navigation__item
+                    a.navigation__link(href='#') Отзывы
+                li.navigation__item
+                    a.navigation__link(href='#') О нас
+                li.navigation__item
+                    a.navigation__link(href='#') Контакты
+            a.navigation__button(href='#') Бесплатная диагностика
+        section.social
+            b.social__slogan Мы в соц. сетях
+            ul.social__list
+                li.social__item
+                    a.social__link(href='#' aria-label='Мы в контакте')
+                        +img({
+                    class: 'social__image',
+                    src: 'img/pngIcons/vk.png',
+                    path: 'img/pngIcons/',
+                    name: 'vk',
+                    format: '.png',
+                    alt: 'Мы в контакте',
+                    retina: ['2x', '3x']
+                })
+                li.social__item
+                    a.social__link(href='#' aria-label='Мы в инстаграме')
+                        +img({
+                    class: 'social__image',
+                    src: 'img/pngIcons/inst.png',
+                    path: 'img/pngIcons/',
+                    name: 'inst',
+                    format: '.png',
+                    alt: 'Мы в инстаграмме',
+                    retina: ['2x', '3x']
+                })
+                li.social__item
+                    a.social__link(href='#' aria-label='Мы в однокласниках')
+                        +img({
+                    class: 'social__image',
+                    src: 'img/pngIcons/ok.png',
+                    path: 'img/pngIcons/',
+                    name: 'ok',
+                    format: '.png',
+                    alt: 'Мы в однокласниках',
+                    retina: ['2x', '3x']
+                })
+                li.social__item
+                    a.social__link(href='#' aria-label='Мы в фейсбуке')
+                        +img({
+                    class: 'social__image',
+                    src: 'img/pngIcons/fb.png',
+                    path: 'img/pngIcons/',
+                    name: 'fb',
+                    format: '.png',
+                    alt: 'Мы в фейсбуке',
+                    retina: ['2x', '3x']
+                })
+        button.arrow(aria-label='Перейти в начало страницы')
+    .container
+        .header__block.header__block--left
+            if (index)
+                a.logo
+                    +img({
+                        class: 'logo__image',
+                        src: 'img/pngIcons/logo.png',
+                        path: 'img/pngIcons/',
+                        name: 'logo',
+                        format: '.png',
+                        alt: 'Логотип',
+                        retina: ['2x', '3x']
+                    })
+            else
+                a.logo(href='#')
+                    +img({
+                        class: 'logo__image',
+                        src: 'img/pngIcons/logo.png',
+                        path: 'img/pngIcons/',
+                        name: 'logo',
+                        format: '.png',
+                        alt: 'Логотип',
+                        retina: ['2x', '3x']
+                    })
+            .header__info.info
+                span.info__block.info__block--location Челябинск, ул. Цвиллинга, д. 57
+                span.info__block.info__block--time Будни: 9:00-18:00, Сб: 9:00-17:00
+        .header__block.header__block--right
+            .header__help
+                a.help(href='#') Нужна консультация?
+            .header__phone
+                a.phone(href='tel:+79043006600') +7 904 300 66 00

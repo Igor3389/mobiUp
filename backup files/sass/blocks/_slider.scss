@@ -1,0 +1,77 @@
+.slider {
+  margin-top: -80px;
+
+  &__item {
+    position: relative;
+    padding-top: 391px;
+    padding-bottom: 340px;
+  }
+
+  &__image {
+    position: absolute;
+    z-index: -10;
+    top: 0;
+    left: 51px;
+  }
+
+  &__title {
+    width: 705px;
+    margin: 0 auto;
+    text-align: center;
+    @include text(60, 60);
+    font-weight: 700;
+    margin-bottom: 33px;
+  }
+
+  &__button {
+    display: block;
+    margin: 0 auto;
+    width: 280px;
+  }
+}
+
+.slick-dots {
+  display: flex;
+  position: absolute;
+  left: 0;
+  bottom: 363px;
+
+  & li {
+    position: relative;
+    margin-right: 8px;
+    width: 21px;
+    height: 21px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid $white;
+    
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    &.slick-active {
+      background-color: $white;
+
+      &:hover {
+        background-color: $white;
+      }
+    }
+
+    & button {
+      position: absolute;
+
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+
+      white-space: nowrap;
+
+      clip-path: inset(100%);
+      clip: rect(1px 1px 1px 1px);
+
+      overflow: hidden;
+    }
+  }
+}

@@ -1,0 +1,217 @@
+// Навигационный блок
+
+@include sm {
+  .no-js {
+    & .navigation__list{
+      display: block;
+    }
+
+    & .navigation__button {
+      width: 100%;
+      padding-left: 0;
+
+      text-align: center;
+      background-position: 55px 18px;
+    }
+
+    & .navigation__toggle {
+      display: none;
+    }
+
+    & .navigation__link:hover {
+      color: #0092c2;
+    }
+
+    & .navigation__button:hover {
+      background-color: $button-hover-color;
+    }
+  }
+}
+
+.navigation {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 53px;
+  background-color: $white;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+
+  @include sm {
+    position: relative;
+  }
+
+  &__toggle {
+    display: none;
+
+    @include sm {
+      display: block;
+      position: absolute;
+      top: 10px;
+      left: 30px;
+      width: 30px;
+      height: 30px;
+
+      background-color: transparent;
+      border: none;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 4px;
+        
+        width: 22px;
+        height: 3px;
+
+        background-color: #bababa;
+        box-shadow: 0 6px 0 0 #bababa, 0 12px 0 0 #bababa;
+      }
+    }
+  }
+
+  &__list {
+    float: left;
+    padding-top: 14px;
+    font-size: 16px;
+    letter-spacing: 2.3px;
+    color: $menu-text-color;
+
+    &::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    @include sm {
+      display: none;
+      float: none;
+      position: absolute;
+      right: 0;
+      top: -14px;
+      width: 82%;
+
+      background-color: rgba(255, 255, 255, 0.9);
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+
+  &__item {
+    float: left;
+    margin-right: 41px;
+
+    &:last-child {
+      margin-right: 0;
+
+      @include sm {
+        margin: 0 auto;
+      }
+    }
+
+    @include md {
+      margin-right: 27px;
+    }
+
+    @include sm {
+      float: none;
+      width: 100%;
+      margin: 0 auto;
+
+      text-align: center;
+
+      &:last-child .navigation__link {
+        border-bottom: 1px solid $text-color;
+      }
+    }
+  }
+
+  &__link {
+    @include sm {
+      display: block;
+      padding: 10px 0;
+
+      border-left: 1px solid $text-color;
+      border-right: 1px solid $text-color;
+      border-top: 1px solid $text-color;
+    }
+
+    &--sub {
+      position: relative;
+      display: block;
+      width: 116px;
+      white-space: nowrap;
+
+      @include sm {
+        width: 100%;
+        margin: 0 auto;
+
+        text-align: center;
+      }
+
+      &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 11px;
+        width: 5px;
+        height: 1px;
+        background-color: $menu-text-color;
+
+        @include sm {
+          display: none;
+        }
+      }
+
+      &::before {
+        right: -2px;
+        transform: rotate(45deg);
+
+        @include sm {
+          right: 106px;
+        }
+      }
+
+      &::after {
+        right: -5px;
+        transform: rotate(-45deg);
+
+        @include sm {
+          right: 103px;
+        }
+      }
+
+      &:hover::before, &:hover::after {
+        background-color: #0092c2;
+      }
+
+      &.navigation__link--active:hover::before,
+      &.navigation__link--active:hover::after {
+        background-color: #96e5ff;
+      }
+    }
+
+    &--active {
+      color: #96e5ff;
+    }
+  }
+
+  &__button {
+    display: block;
+    float: right;
+    width: 226px;
+    height: 53px;
+    padding-top: 15px;
+    padding-left: 42px;
+
+    font-size: 14px;
+    letter-spacing: 2px;
+
+    color: $white;
+    background-color: $button-color;
+    background-image: url('../img/pngIcons/icon-pencil.png');
+    background-repeat: no-repeat;
+    background-position: 18px 18px;
+  }
+}

@@ -1,0 +1,11 @@
+.main {
+  &__bottom {
+    display: flex;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    @include text(35, 41);
+    margin-bottom: 29px;
+  }
+}
